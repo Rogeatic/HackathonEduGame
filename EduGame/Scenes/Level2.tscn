@@ -1,28 +1,28 @@
-[gd_scene load_steps=12 format=3 uid="uid://ciiyelpsj61q5"]
+[gd_scene load_steps=12 format=3 uid="uid://bmcasfrden8ym"]
 
-[ext_resource type="Script" path="res://Script/Level.gd" id="1_u7wi4"]
-[ext_resource type="Texture2D" uid="uid://bug8hjevr0145" path="res://Resources/wall.png" id="2_1xpge"]
-[ext_resource type="Texture2D" uid="uid://bwo20jvsmiull" path="res://Resources/breakable_0.png" id="3_7nb26"]
-[ext_resource type="PackedScene" uid="uid://dy8flvroj4h2j" path="res://Scenes/Player.tscn" id="3_m8gvy"]
-[ext_resource type="Texture2D" uid="uid://dhc6nexnj6d1y" path="res://Assets/wall001.png" id="4_xodsh"]
-[ext_resource type="PackedScene" uid="uid://bld11fite4ahg" path="res://Scenes/Exit.tscn" id="6_2od3e"]
+[ext_resource type="Script" path="res://Script/Level2.gd" id="1_fw6ny"]
+[ext_resource type="Texture2D" uid="uid://bug8hjevr0145" path="res://Resources/wall.png" id="2_24157"]
+[ext_resource type="Texture2D" uid="uid://bwo20jvsmiull" path="res://Resources/breakable_0.png" id="3_8hkmv"]
+[ext_resource type="Texture2D" uid="uid://dhc6nexnj6d1y" path="res://Assets/wall001.png" id="4_n6b2r"]
+[ext_resource type="PackedScene" uid="uid://dy8flvroj4h2j" path="res://Scenes/Player.tscn" id="5_6yvl7"]
+[ext_resource type="PackedScene" uid="uid://bld11fite4ahg" path="res://Scenes/Exit.tscn" id="6_ulmsi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4ds1"]
-texture = ExtResource("2_1xpge")
+texture = ExtResource("2_24157")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1cmdt"]
-texture = ExtResource("3_7nb26")
+texture = ExtResource("3_8hkmv")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5raa"]
-texture = ExtResource("3_7nb26")
+texture = ExtResource("3_8hkmv")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -30,12 +30,11 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uaswk"]
-texture = ExtResource("4_xodsh")
+texture = ExtResource("4_n6b2r")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSet" id="TileSet_d7b5h"]
 resource_local_to_scene = true
@@ -47,7 +46,7 @@ sources/2 = SubResource("TileSetAtlasSource_o5raa")
 sources/3 = SubResource("TileSetAtlasSource_uaswk")
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_u7wi4")
+script = ExtResource("1_fw6ny")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_d7b5h")
@@ -72,17 +71,15 @@ layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
 layer_3/y_sort_enabled = false
 layer_3/y_sort_origin = 0
-layer_3/z_index = 3
+layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array()
 
-[node name="Player" parent="." instance=ExtResource("3_m8gvy")]
+[node name="Player" parent="." instance=ExtResource("5_6yvl7")]
 z_index = 0
-position = Vector2(928, 544)
+position = Vector2(64, 64)
 
-[node name="Exit" parent="." instance=ExtResource("6_2od3e")]
-position = Vector2(56, 56)
-gravity_scale = 0.0
-lock_rotation = true
+[node name="Exit2" parent="." instance=ExtResource("6_ulmsi")]
+position = Vector2(96, 608)
 
 [node name="Timer" type="Timer" parent="."]
 

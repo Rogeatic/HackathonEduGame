@@ -53,6 +53,8 @@ var subject_studying_
 var json_data_
 var json_wrong_ = {"results":[]}
 
+var maze_time_ = 10
+
 func getCorrectAnswer(index):
 	return json_data_["results"][index]["correct_answer"]
 
