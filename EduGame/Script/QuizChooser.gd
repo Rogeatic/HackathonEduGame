@@ -67,10 +67,10 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 
 func _on_http_request_done():
 	# Continue your code after the HTTP request here
-	#get_tree().change_scene_to_file('res://Scenes/classroom.tscn')
+	# Load the Quiz
 	get_tree().change_scene_to_file('res://Scenes/quiz.tscn')
 	self.disconnect("http_request_completed", Callable(self, "_on_http_request_done"))
-	#self.disconnect("http_request_completed", self, "_on_http_request_done")
+	# self.disconnect("http_request_completed", self, "_on_http_request_done")
 
 
 

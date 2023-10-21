@@ -10,7 +10,6 @@ var categoryDict_ = {
 	"Computer Science": 18,
 	"History": 23
 }
-var incorrect_ = 0
 
 var difficultyList_ = [
 	"easy",
