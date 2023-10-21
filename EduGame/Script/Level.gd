@@ -6,11 +6,11 @@ extends Node2D
 @onready var tilemap = $TileMap
 
 # Randomizer & Dimension values ( make sure width & height is uneven)
-const initial_width = 15 
-const initial_height = 15 
+const initial_width = 50
+const initial_height = 40
 var map_width = initial_width
 var map_height = initial_height 
-var map_offset = 4 #Shifts map four rows down for UI
+var map_offset = 0 #Shifts map four rows down for UI
 var rng = RandomNumberGenerator.new()
 
 # Tilemap constants
@@ -68,7 +68,7 @@ func generate_breakables():
 		for y in range(1, map_height - 1):
 			var base_breakable_chance = 0.2  # default 20% chance
 			var level_chance_multiplier = 0.01  # increase by 1% per level
-			var breakable_spawn_chance = base_breakable_chance + (GlobalData.current_level_ - 1) * level_chance_multiplier
+			var breakable_spawn_chance = base_breakable_chance + (1) * level_chance_multiplier
 			breakable_spawn_chance = min(breakable_spawn_chance, 0.5) #max chance of 50%
 			var current_cell = Vector2i(x, y  + map_offset)
 			var skip_current_cell = false
