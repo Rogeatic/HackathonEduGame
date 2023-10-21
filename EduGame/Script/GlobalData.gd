@@ -11,6 +11,12 @@ var categoryDict_ = {
 	"History": 23
 }
 
+var difficultyList_ = [
+	"easy",
+	"medium",
+	"hard"
+]
+
 var type_of_question_ = ["multiple", "boolean"]
 var number_of_quesions_ = 5
 var selected_catagory_ # this is the value not the key

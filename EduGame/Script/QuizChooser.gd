@@ -7,16 +7,26 @@ signal http_request_completed
 
 func _ready():
 	var subjects = GlobalData.categoryDict_.keys()
-	var itemList = $Panel/CatagoryList 
-	populate_item_list(subjects, itemList)
+	var diffculty = GlobalData.difficultyList_
+	
+	print(diffculty)
+	
+	populate_item_list(subjects, diffculty)
 	
 	
 
-func populate_item_list(items_array, itemNode):
-	itemNode.clear()
+func populate_item_list(catagory_array, diffculty_array):
+	var catagoryList = $Panel/CatagoryList
+	# var difficultyList = $difficultyList
 	
-	for item in items_array:
-		itemNode.add_item(item)
+	catagoryList.clear()
+	# difficultyList.clear()
+	
+	for item in catagory_array:
+		catagoryList.add_item(item)
+	
+#	for item in diffculty_array:
+#		difficultyList.add_item(item) # need to add this into the on press start
 
 func _on_ItemList_item_selected(index):
 	print('slected item', $Panel/CatagoryList.get_item_text(index))
