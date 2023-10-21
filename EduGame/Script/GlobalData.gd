@@ -7,6 +7,7 @@ var categoryDict_ = {
 	"Natural Science": 17,
 	"Geography": 22,
 	"Math": 19,
+	# "Math": 19,
 	"Computer Science": 18,
 	"History": 23
 }
@@ -30,9 +31,18 @@ var color: Array = ["blue", "grey", "orange"]
 
 # Level variables
 var current_level = 1
+var htmlEntitesReplacement_ = {
+	"&#039;": "'",
+	"&Sigma;": "Σ",
+	"&Omicron;": "ο",
+	"&Pi;": "π",
+	"&Nu;": "ν",
+	"&quot;": '"',
+	"&rsquo;": "’"
+}
 
 var type_of_question_ = ["multiple", "boolean"]
-var number_of_quesions_ = 5
+var number_of_quesions_ = 25
 var selected_catagory_ # this is the value not the key
 var selected_difficulty_ = "easy"
 

@@ -38,7 +38,6 @@ func _Get_Api_Data():
 
 	#print("Button pressed")  # Add this line
 	var url = "https://opentdb.com/api.php?amount=" + str(GlobalData.number_of_quesions_) + "&category=" + str(GlobalData.selected_catagory_) + "&difficulty=" + str(GlobalData.selected_difficulty_) + "&type=" + str(GlobalData.type_of_question_[0])
-
 	$Panel/HTTPRequest.request(url)
 	print("get api data called")
 
@@ -59,7 +58,7 @@ func _on_play_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	GlobalData.json_data_ = JSON.parse_string(body.get_string_from_utf8())
-
+	
 	emit_signal("http_request_completed")
 
 

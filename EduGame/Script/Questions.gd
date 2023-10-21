@@ -11,6 +11,9 @@ var index
 var label
 var timer
 var buttons
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	index = 0
@@ -25,13 +28,16 @@ func _ready():
 	but4 = $Question/Button4
 
 	question = GlobalData.getFirstQuestion()
-	question_label.text = question
+	
+	var edited = find_html_entities(question)
+	print(edited)
+	question_label.text = edited
 
 	answers = GlobalData.getFirstAnswers()
-	but1.text = answers[0]
-	but3.text = answers[2]
-	but4.text = answers[3]
-	but2.text = answers[1]
+	but1.text = find_html_entities(answers[0])
+	but2.text = find_html_entities(answers[1])
+	but3.text = find_html_entities(answers[2])
+	but4.text = find_html_entities(answers[3])
 	buttons = [but1, but2, but3, but4]
 	for i in buttons:
 		i.modulate = Color(1,1,1)	
@@ -54,17 +60,21 @@ func _move_to_next_QuestionData():
 		index += 1
 		
 		question = GlobalData.getQuestion(index)
+		var edited = find_html_entities(question)
+		print(edited)
+		question_label.text = edited
+		
 		answers = GlobalData.getAnswers(index)
 		
-		question_label.text = question
+		
 		
 		for i in buttons:
 			i.modulate = Color(1,1,1)	
 		
-		but1.text = answers[0]
-		but2.text = answers[1]
-		but3.text = answers[2]
-		but4.text = answers[3]
+		but1.text = find_html_entities(answers[0])
+		but2.text = find_html_entities(answers[1])
+		but3.text = find_html_entities(answers[2])
+		but4.text = find_html_entities(answers[3])
 	else:
 		print(GlobalData.json_wrong_["results"])
 		print("done")
@@ -111,3 +121,16 @@ func enableButtons():
 	but2.disabled = false
 	but3.disabled = false
 	but4.disabled = false
+
+
+func find_html_entities(input_string):
+	
+	var htmlEntities = GlobalData.htmlEntitesReplacement_
+	
+	
+	
+	for key in htmlEntities:
+		if input_string.find(key):
+			input_string = input_string.replace(key, htmlEntities[key])
+	
+	return input_string
