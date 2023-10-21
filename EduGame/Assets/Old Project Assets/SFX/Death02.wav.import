@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gtdkwd6oldgv"
+path="res://.godot/imported/Death02.wav-e5d3ad9fc7bdb8471d3e374a0a8c3e4f.sample"
+
+[deps]
+
+source_file="res://Assets/Old Project Assets/SFX/Death02.wav"
+dest_files=["res://.godot/imported/Death02.wav-e5d3ad9fc7bdb8471d3e374a0a8c3e4f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
