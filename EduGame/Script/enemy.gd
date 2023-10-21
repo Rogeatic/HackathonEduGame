@@ -19,7 +19,7 @@ var max_health = 100
 var current_health = max_health
 
 var attack_damage = 10  # Damage amount when attacking
-var attack_cooldown = 1.5  # Cooldown between attacks in seconds
+var attack_cooldown = 2.5  # Cooldown between attacks in seconds
 var attack_timer = 0.0  # Timer to track attack cooldown
 
 func _ready():
@@ -31,6 +31,12 @@ func _physics_process(delta):
 	if attack_timer > 0:
 		attack_timer -= delta
 	
+	# Check if the enemy can attack
+	if player_in_range and attack_timer <= 0:
+		current_state = State.ATTACKING
+	elif player_in_range:
+		current_state = State.CHASING
+
 	match current_state:
 		State.PATROLLING:
 			patrol(delta)
@@ -57,10 +63,11 @@ func chase(delta):
 		velocity = Vector2()
 
 func attack():
-	if player_in_range and attack_timer <= 0:
-		# Check if the player has a method to take damage
-		if player.has_method("take_damage"):
-			player.take_damage(attack_damage)
+	if attack_timer <= 0:
+		var bodies = $AttackRange.get_overlapping_bodies()  # Adjust the node name to match your AttackRange node
+		for body in bodies:
+			if body.has_method("take_damage"):
+				body.take_damage(attack_damage)
 		attack_timer = attack_cooldown
 
 func _on_DetectionArea_area_entered(area):
