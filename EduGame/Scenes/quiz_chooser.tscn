@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3fwaw8065dmj"]
 
-[ext_resource type="Script" path="res://Script/Quiz Chooser.gd" id="1_bcwcx"]
+[ext_resource type="Script" path="res://Script/QuizChooser.gd" id="1_emutp"]
 
 [node name="Quiz Chooser" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bcwcx")
+script = ExtResource("1_emutp")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -50,6 +50,9 @@ offset_right = 628.112
 offset_bottom = 343.0
 text = "Play"
 
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel"]
+
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_activated" from="Panel/ItemList" to="." method="_on_item_list_item_activated"]
 [connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]
+[connection signal="request_completed" from="Panel/HTTPRequest" to="." method="_on_http_request_request_completed"]

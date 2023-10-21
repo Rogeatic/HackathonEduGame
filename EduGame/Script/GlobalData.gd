@@ -4,3 +4,5 @@ extends Node
 var pos_subjects_ = ["Math", "Science", "English"]
 
 var subject_studying_
+
+var json_data_
