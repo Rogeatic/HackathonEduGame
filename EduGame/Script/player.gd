@@ -56,36 +56,22 @@ func _physics_process(delta):
 	var collision := move_and_collide(movement)
 	if collision:
 		var body = collision.get_collider()
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
 		if body == tilemap:  # Check if the player collided with the TileMap
 			var colliding_cell = tilemap.world_to_map(collision.collision_point)
 			if tilemap.get_cell(colliding_cell.x, colliding_cell.y + level.map_offset) == level.BREAKABLE_TILE_ID:
 				tilemap.set_cell(colliding_cell.x, colliding_cell.y + level.map_offset, -1)  # Remove the breakable block
-=======
 		if body.has_method("get_name"): 
 			print("Collided with:", body.get_name())
 			if body.get_name() == "Exit":
 				GlobalData.level_scene
-=======
 		if body.has_method("get_name"): 
 			print("Collided with:", body.get_name())
 			if body.get_name() == "Exit":
->>>>>>> d98a54f1393566a13b34cab2c0e32e431a58fd4a
 				get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
 			if body.get_name() == "Exit2":
 				get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 		else:
 			print("Collided with an unnamed object.")
-<<<<<<< HEAD
-
-=======
->>>>>>> d98a54f1393566a13b34cab2c0e32e431a58fd4a
-	
->>>>>>> Stashed changes
 	
 
 	# Determine animation

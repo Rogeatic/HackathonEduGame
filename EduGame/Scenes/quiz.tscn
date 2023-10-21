@@ -5,10 +5,9 @@
 [node name="quiz" type="Node2D"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 36.0
-offset_top = -96.53
-offset_right = 1188.0
-offset_bottom = 418.47
+offset_top = -104.0
+offset_right = 1152.0
+offset_bottom = 411.0
 script = ExtResource("1_33vki")
 
 [node name="Question" type="Label" parent="MarginContainer"]
@@ -23,10 +22,10 @@ anchor_left = 0.5
 anchor_top = 5.591
 anchor_right = 0.5
 anchor_bottom = 5.591
-offset_left = -376.0
-offset_top = -39.366
-offset_right = -135.92
-offset_bottom = 39.344
+offset_left = -368.0
+offset_top = -37.366
+offset_right = -127.92
+offset_bottom = 41.344
 text = "Button 1"
 
 [node name="Button2" type="Button" parent="MarginContainer/Question"]
@@ -36,10 +35,10 @@ anchor_left = 0.5
 anchor_top = 5.706
 anchor_right = 0.5
 anchor_bottom = 5.706
-offset_left = 139.0
-offset_top = -39.356
-offset_right = 379.08
-offset_bottom = 39.354
+offset_left = 128.0
+offset_top = -40.356
+offset_right = 368.08
+offset_bottom = 38.354
 text = "Button 2"
 
 [node name="Button3" type="Button" parent="MarginContainer/Question"]
@@ -49,10 +48,10 @@ anchor_left = 0.5
 anchor_top = 7.422
 anchor_right = 0.5
 anchor_bottom = 7.422
-offset_left = -377.0
-offset_top = 55.028
-offset_right = -136.92
-offset_bottom = 133.738
+offset_left = -368.0
+offset_top = 107.028
+offset_right = -127.92
+offset_bottom = 185.738
 text = "Button 3"
 
 [node name="Button4" type="Button" parent="MarginContainer/Question"]
@@ -62,10 +61,10 @@ anchor_left = 0.5
 anchor_top = 7.733
 anchor_right = 0.5
 anchor_bottom = 7.733
-offset_left = 137.0
-offset_top = 39.942
-offset_right = 377.08
-offset_bottom = 118.652
+offset_left = 128.0
+offset_top = 98.942
+offset_right = 368.08
+offset_bottom = 177.652
 text = "Button 4
 "
 
@@ -74,16 +73,11 @@ wait_time = 33.92
 autostart = true
 
 [node name="Label" type="Label" parent="MarginContainer/Question"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.969
-anchor_top = 19.355
-anchor_right = 0.969
-anchor_bottom = 19.355
-offset_left = -227.288
-offset_top = -89.7
-offset_right = -17.288
-offset_bottom = -12.7
+layout_mode = 2
+offset_left = 889.0
+offset_top = 413.53
+offset_right = 2041.0
+offset_bottom = 439.53
 text = "8:00"
 horizontal_alignment = 1
 vertical_alignment = 1
