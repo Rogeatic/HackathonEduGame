@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d041wgfqyuyq4"]
+[gd_scene load_steps=11 format=3 uid="uid://d041wgfqyuyq4"]
 
 [ext_resource type="Script" path="res://Script/classroom.gd" id="1_0fdxh"]
 [ext_resource type="Texture2D" uid="uid://cq6fqh1iqwil6" path="res://Assets/NEW/A5.png" id="1_qcds1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://57tujmma74pf" path="res://Assets/NEW/Character v.2/characters/Animation Sprites/tile010.png" id="4_sr4bf"]
 [ext_resource type="Texture2D" uid="uid://bdaii37wtutdp" path="res://Assets/NEW/Character v.2/acc/hat_cowboy.png" id="5_rt14t"]
 [ext_resource type="Texture2D" uid="uid://b4nlj5jg502ej" path="res://Assets/NEW/Character v.2/acc/beard.png" id="6_675ll"]
+[ext_resource type="Texture2D" uid="uid://bxrvkt7cu563w" path="res://Assets/NEW/Character v.2/acc/hat_witch.png" id="7_pm7cp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6h0bj"]
 texture = ExtResource("1_qcds1")
@@ -1834,6 +1835,13 @@ scale = Vector2(4.56723, 3.82653)
 texture = ExtResource("6_675ll")
 hframes = 97
 vframes = 25
+
+[node name="HatWitch" type="Sprite2D" parent="."]
+position = Vector2(943, 422)
+scale = Vector2(3.40625, 2.91026)
+texture = ExtResource("7_pm7cp")
+hframes = 8
+vframes = 40
 
 [connection signal="pressed" from="Button" to="timeLabel" method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

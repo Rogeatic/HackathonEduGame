@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyps7bcybna44"]
+[gd_scene load_steps=4 format=3 uid="uid://dyps7bcybna44"]
 
 [ext_resource type="Script" path="res://Script/menu.gd" id="1_k7076"]
 [ext_resource type="Texture2D" uid="uid://b3dccxjmeycwd" path="res://Assets/NEW/Bonus/Animated/Door1.png" id="2_vfsy7"]
+[ext_resource type="Texture2D" uid="uid://bremrw7h86kr1" path="res://Assets/path001.png" id="3_1vyen"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,10 +11,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
+offset_left = -575.0
+offset_top = -323.0
+offset_right = 577.0
+offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k7076")
@@ -24,10 +25,10 @@ anchor_left = 0.504
 anchor_top = 0.5
 anchor_right = 0.504
 anchor_bottom = 0.5
-offset_left = -96.608
-offset_top = -45.0
-offset_right = 99.392
-offset_bottom = 34.0
+offset_left = -111.178
+offset_top = -46.3161
+offset_right = 84.8217
+offset_bottom = 32.6839
 text = "Begin Education"
 
 [node name="Options" type="Button" parent="."]
@@ -60,7 +61,7 @@ layout_mode = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 12.0
-offset_top = -35.0
+offset_top = -124.0
 offset_right = 70.0
 offset_bottom = -4.0
 text = "Quit"
@@ -72,6 +73,202 @@ scale = Vector2(1.57292, 1.51302)
 texture = ExtResource("2_vfsy7")
 vframes = 4
 frame = 1
+
+[node name="Path001" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(676.43, 298.684)
+rotation = -0.283328
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path010" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(674.43, 317.684)
+rotation = -1.82475
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path011" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(672.43, 339.684)
+rotation = -2.93627
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path012" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(660.43, 352.684)
+rotation = -4.80283
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path013" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(647.43, 358.684)
+rotation = -3.11162
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path014" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(628.43, 364.684)
+rotation = -4.80383
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path015" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(603.43, 362.684)
+rotation = -4.56306
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path016" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(579.105, 361.262)
+rotation = -3.36633
+scale = Vector2(0.670141, 0.526094)
+texture = ExtResource("3_1vyen")
+
+[node name="Path017" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(551.43, 362.684)
+rotation = -2.83337
+scale = Vector2(0.523256, 0.57799)
+texture = ExtResource("3_1vyen")
+
+[node name="Path018" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(533.43, 363.684)
+rotation = -3.36633
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path019" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(510.43, 359.684)
+rotation = -1.54163
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path020" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(488.43, 362.684)
+rotation = -3.36633
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path021" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(466.43, 350.684)
+rotation = -3.36633
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path028" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(474.43, 353.684)
+rotation = -2.89709
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path022" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(459.43, 324.684)
+rotation = -2.60726
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path023" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(459.43, 304.684)
+rotation = -3.40076
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path024" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(468.43, 286.684)
+rotation = -3.04269
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path025" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(479.43, 278.684)
+rotation = -2.19811
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path026" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(494.43, 273.684)
+rotation = -1.32098
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path002" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(661.43, 289.684)
+rotation = -1.52024
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path003" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(639.43, 270.684)
+rotation = -3.09394
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path027" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(654.43, 275.684)
+rotation = -2.72203
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path004" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(621.341, 270.789)
+rotation = -1.38238
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path005" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(605.43, 266.684)
+rotation = -4.87011
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path009" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(585.43, 266.684)
+rotation = -6.32269
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path006" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(562.43, 267.684)
+rotation = -1.48008
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path007" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(536.43, 268.684)
+rotation = -1.58199
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
+
+[node name="Path008" type="Sprite2D" parent="."]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(511.43, 269.684)
+rotation = -4.94698
+scale = Vector2(0.523256, 0.616279)
+texture = ExtResource("3_1vyen")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
