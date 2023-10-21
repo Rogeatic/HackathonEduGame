@@ -30,7 +30,9 @@ func _on_menu_pressed():
 func _on_play_pressed():
 	var selected_subject = $Panel/ItemList.get_selected_items()
 	
-	GlobalData.subject_studying = selected_subject
+	GlobalData.subject_studying_ = selected_subject
+	
+	print(GlobalData.subject_studying_)
 	
 	
 	pass # Replace with function body.
