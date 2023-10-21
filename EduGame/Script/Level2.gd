@@ -24,19 +24,18 @@ const BREAKABLE_TILE_LAYER = 1
 const UNREAKABLE_TILE_LAYER = 2
 const SPECIAL_TILE_ID = 3
 const SPECIAL_TILE_LAYER = 3
-var SpecialTile
-
 
 
 func _ready():
 	generate_map()
 	create_player()
+	place_special_tile()
 	var timer = $Timer
 	timer.wait_time = 1.0
 	timer.autostart = true
 	timer.start()
 	timer.connect("timeout", Callable(self, "_on_timer_timeout" ))
-	
+
 func create_player():
 	var player_scene = preload("res://Scenes/Player.tscn")
 	var player = player_scene.instantiate()
@@ -65,6 +64,13 @@ func generate_map():
 	generate_unbreakables()
 	generate_breakables()
 	generate_background()
+	
+func place_special_tile():
+	# Bottom right position is (map_width - 1, map_height - 1)
+	var bottom_right = Vector2i(map_width - 2, map_height - 2 + map_offset)
+	
+	# Set the special tile on the designated layer
+	tilemap.set_cell(SPECIAL_TILE_LAYER, bottom_right, SPECIAL_TILE_ID, Vector2i(0, 0), 0)
 
 
 # Checks if tiles are empty or not
@@ -82,7 +88,7 @@ func generate_unbreakables():
 	# Generate solid walls in a grid on Layer 2, starting from (1, 1)
 	for x in range(1, map_width - 2):  # Stop before the last column
 		for y in range(1, map_height - 2):  # Stop before the last row
-			if x % 2 == 0 and y % 2 == 0: # Check if row and columwwn are even
+			if x % 2 == 0 and y % 2 == 0: # Check if row and column are even
 				tilemap.set_cell(UNREAKABLE_TILE_LAYER, Vector2i(x, y + map_offset), UNREAKABLE_TILE_ID, Vector2i(0, 0), 0)
 	
 func generate_breakables():
@@ -132,7 +138,10 @@ func generate_background():
 			if is_cell_empty(BREAKABLE_TILE_LAYER, cell_coords) and is_cell_empty(UNREAKABLE_TILE_LAYER, cell_coords):
 				tilemap.set_cell(BACKGROUND_TILE_LAYER, cell_coords, BACKGROUND_TILE_ID, Vector2i(0, 0), 0)
 
+
 #------------------------------------ TIMER -----------------------
+
+
 
 
 func _on_timer_timeout():

@@ -19,8 +19,15 @@ func _input(event):
 		if (distanceOfClick < 40):
 			print(distanceOfClick)
 		
+# In Player.gd
 
-		
+
+
+func handle_special_tile_collision():
+	print("Collided with special tile!")
+	# Handle the collision - for example, move to next level, 
+	# play an animation, etc.
+
 
 
 	#elif event is InputEventMouseMotion:
@@ -43,7 +50,21 @@ func _physics_process(delta):
 	var direction = Vector2(x_input, y_input).normalized()
 	
 	# Assuming CharacterBody2D has a move_and_collide method similar to KinematicBody2D
-	move_and_collide(direction * speed * delta)
+	var movement = direction * speed * delta
+	var collision := move_and_collide(movement)
+	if collision:
+		var body = collision.get_collider()
+		if body.has_method("get_name"): 
+			print("Collided with:", body.get_name())
+			if body.get_name() == "Exit":
+				get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
+			if body.get_name() == "Exit2":
+				pass
+		else:
+			print("Collided with an unnamed object.")
+
+	
+	
 
 	# Determine animation
 	if direction == Vector2(0, -1):
