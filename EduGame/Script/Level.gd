@@ -6,8 +6,8 @@ extends Node2D
 @onready var tilemap = $TileMap
 
 # Randomizer & Dimension values ( make sure width & height is uneven)
-const initial_width = 15 
-const initial_height = 15 
+const initial_width = 30 
+const initial_height = 30 
 var map_width = initial_width
 var map_height = initial_height 
 var map_offset = 0 #Shifts map four rows down for UI
