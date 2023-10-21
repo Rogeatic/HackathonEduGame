@@ -17,7 +17,39 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k7076")
 
+[node name="Play" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.504
+anchor_top = 0.5
+anchor_right = 0.504
+anchor_bottom = 0.5
+offset_left = -85.608
+offset_top = -88.0
+offset_right = 88.392
+offset_bottom = -41.0
+text = "Begin Education"
+
+[node name="Options" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 384.0
+offset_top = 328.0
+offset_right = 777.0
+offset_bottom = 359.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -43.0
+offset_right = 78.0
+offset_bottom = -12.0
+text = "Quit"
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 384.0
 offset_top = 264.0
@@ -32,18 +64,6 @@ theme_override_constants/margin_bottom = 6
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Play"
-
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Options"
-
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

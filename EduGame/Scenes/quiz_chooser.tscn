@@ -1438,35 +1438,51 @@ offset_bottom = 648.0
 
 [node name="Menu" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 7.0
-offset_right = 73.0
-offset_bottom = 38.0
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 89.0
+offset_bottom = 46.0
 text = "<- Menu"
 alignment = 0
 
 [node name="CatagoryList" type="ItemList" parent="Panel"]
 layout_mode = 1
-offset_top = 122.0
-offset_right = 1151.0
-offset_bottom = 271.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.559
+anchor_right = 0.5
+anchor_bottom = 0.559
+offset_left = -100.5
+offset_top = -236.232
+offset_right = 100.5
+offset_bottom = -93.232
 
 [node name="SubjectLabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 521.0
-offset_top = 84.0
-offset_right = 636.0
-offset_bottom = 123.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.232
+anchor_right = 0.503
+anchor_bottom = 0.232
+offset_left = -57.953
+offset_top = -66.336
+offset_right = 57.047
+offset_bottom = -27.336
 text = "Subjects"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DiffcultyLabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 517.0
-offset_top = 298.0
-offset_right = 632.0
-offset_bottom = 337.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.562
+anchor_right = 0.5
+anchor_bottom = 0.562
+offset_left = -58.5
+offset_top = -66.176
+offset_right = 56.5
+offset_bottom = -27.176
 text = "Diffculty"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1474,37 +1490,54 @@ vertical_alignment = 1
 [node name="Play" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.006
-anchor_bottom = 0.008
-offset_left = 496.0
-offset_top = 440.0
-offset_right = 648.112
-offset_bottom = 478.0
+anchor_left = 0.5
+anchor_top = 0.561
+anchor_right = 0.5
+anchor_bottom = 0.561
+offset_left = -79.5
+offset_top = 76.472
+offset_right = 79.518
+offset_bottom = 119.656
 tooltip_text = "Make sure to select a subject to study"
-text = "Play"
+text = "Wake Up"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Panel"]
 
 [node name="easyButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 392.0
-offset_top = 344.0
-offset_right = 504.0
-offset_bottom = 382.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_top = 0.56
+anchor_right = 0.389
+anchor_bottom = 0.56
+offset_left = -55.739
+offset_top = -18.88
+offset_right = 56.261
+offset_bottom = 19.12
 
 [node name="mediumButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 520.0
-offset_top = 344.0
-offset_right = 632.0
-offset_bottom = 382.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.56
+anchor_right = 0.5
+anchor_bottom = 0.56
+offset_left = -55.5
+offset_top = -18.88
+offset_right = 56.5
+offset_bottom = 19.12
 
 [node name="hardButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 648.0
-offset_top = 344.0
-offset_right = 760.0
-offset_bottom = 382.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.56
+anchor_right = 0.5
+anchor_bottom = 0.56
+offset_left = 72.5
+offset_top = -18.88
+offset_right = 184.5
+offset_bottom = 19.12
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)

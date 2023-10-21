@@ -19,53 +19,53 @@ horizontal_alignment = 1
 [node name="Button1" type="Button" parent="MarginContainer/Question"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.275
-anchor_top = 5.25
-anchor_right = 0.275
-anchor_bottom = 5.25
-offset_left = -116.8
-offset_top = -30.5
-offset_right = 123.28
-offset_bottom = 48.21
+anchor_left = 0.5
+anchor_top = 5.591
+anchor_right = 0.5
+anchor_bottom = 5.591
+offset_left = -376.0
+offset_top = -39.366
+offset_right = -135.92
+offset_bottom = 39.344
 text = "Button 1"
 
 [node name="Button2" type="Button" parent="MarginContainer/Question"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.725
+anchor_left = 0.5
 anchor_top = 5.706
-anchor_right = 0.725
+anchor_right = 0.5
 anchor_bottom = 5.706
-offset_left = -120.2
+offset_left = 139.0
 offset_top = -39.356
-offset_right = 119.88
+offset_right = 379.08
 offset_bottom = 39.354
 text = "Button 2"
 
 [node name="Button3" type="Button" parent="MarginContainer/Question"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.277
-anchor_top = 11.052
-anchor_right = 0.277
-anchor_bottom = 11.052
-offset_left = -120.104
-offset_top = -39.352
-offset_right = 119.976
-offset_bottom = 39.3579
+anchor_left = 0.5
+anchor_top = 7.422
+anchor_right = 0.5
+anchor_bottom = 7.422
+offset_left = -377.0
+offset_top = 55.028
+offset_right = -136.92
+offset_bottom = 133.738
 text = "Button 3"
 
 [node name="Button4" type="Button" parent="MarginContainer/Question"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.723
-anchor_top = 10.783
-anchor_right = 0.723
-anchor_bottom = 10.783
-offset_left = -119.896
-offset_top = -39.358
-offset_right = 120.184
-offset_bottom = 39.3519
+anchor_left = 0.5
+anchor_top = 7.733
+anchor_right = 0.5
+anchor_bottom = 7.733
+offset_left = 137.0
+offset_top = 39.942
+offset_right = 377.08
+offset_bottom = 118.652
 text = "Button 4
 "
 

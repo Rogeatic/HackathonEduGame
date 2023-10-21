@@ -44,7 +44,7 @@ var htmlEntitesReplacement_ = {
 
 
 var type_of_question_ = ["multiple", "boolean"]
-var number_of_quesions_ = 25
+var number_of_quesions_ = 10
 var selected_catagory_ # this is the value not the key
 var selected_difficulty_ = "easy"
 

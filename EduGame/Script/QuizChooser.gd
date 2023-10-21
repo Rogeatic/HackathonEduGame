@@ -20,9 +20,9 @@ func populate_item_list():
 	var medButton = $Panel/mediumButton
 	var hardButton = $Panel/hardButton
 	
-	easyButton.text = GlobalData.difficultyList_[0]
-	medButton.text = GlobalData.difficultyList_[1]
-	hardButton.text = GlobalData.difficultyList_[2]
+	easyButton.text = GlobalData.difficultyList_[0].capitalize() 
+	medButton.text = GlobalData.difficultyList_[1].capitalize() 
+	hardButton.text = GlobalData.difficultyList_[2].capitalize() 
 
 
 
