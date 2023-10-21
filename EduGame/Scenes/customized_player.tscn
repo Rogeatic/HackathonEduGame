@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://iv011262nhla"]
+
+[ext_resource type="Texture2D" uid="uid://1iolghdohdth" path="res://Assets/NEW/Character v.2/characters/char1.png" id="1_6b23m"]
+
+[sub_resource type="Animation" id="Animation_llfq1"]
+resource_name = "Walk_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7pvsf"]
+_data = {
+"Walk_down": SubResource("Animation_llfq1")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(228, 121)
+scale = Vector2(3, 3)
+texture = ExtResource("1_6b23m")
+hframes = 8
+vframes = 48
+frame = 1
+
+[node name="Shadow" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7pvsf")
+}
