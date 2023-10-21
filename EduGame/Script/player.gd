@@ -6,6 +6,25 @@ extends CharacterBody2D
 @onready var level = get_node("/root/Level")
 
 var speed = 100
+#var width/2 = ProjectSettings.get_setting("display/window/size/viewport_width")
+#var height/2 = ProjectSettings.get_setting("display/window/size/viewport_height")
+
+
+func _input(event):
+   # Mouse in viewport coordinates.
+	var playerPos = get_viewport_rect().size / 2
+	if event is InputEventMouseButton:
+		var distanceOfClick = playerPos.distance_to(event.position)
+		#print(str(distanceOfClick))
+		if (distanceOfClick < 40):
+			print(distanceOfClick)
+		
+
+		
+
+
+	#elif event is InputEventMouseMotion:
+		#print("Mouse Motion at: ", event.position)
 
 func _physics_process(delta):
 	var x_input = 0
