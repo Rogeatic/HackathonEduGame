@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var player = $CharacterBody2D
 @onready var camera = $Camera2D
 @onready var level = get_node("/root/Level")
+@onready var tilemap = get_node("/root/Level/TileMap")
+
 
 var speed = 100
 #var width/2 = ProjectSettings.get_setting("display/window/size/viewport_width")
@@ -54,16 +56,10 @@ func _physics_process(delta):
 	var collision := move_and_collide(movement)
 	if collision:
 		var body = collision.get_collider()
-		if body.has_method("get_name"): 
-			print("Collided with:", body.get_name())
-			if body.get_name() == "Exit":
-				get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
-			if body.get_name() == "Exit2":
-				get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-		else:
-			print("Collided with an unnamed object.")
-
-	
+		if body == tilemap:  # Check if the player collided with the TileMap
+			var colliding_cell = tilemap.world_to_map(collision.collision_point)
+			if tilemap.get_cell(colliding_cell.x, colliding_cell.y + level.map_offset) == level.BREAKABLE_TILE_ID:
+				tilemap.set_cell(colliding_cell.x, colliding_cell.y + level.map_offset, -1)  # Remove the breakable block
 	
 
 	# Determine animation
