@@ -1,10 +1,14 @@
 [gd_scene load_steps=8 format=3 uid="uid://b3fwaw8065dmj"]
+[gd_scene load_steps=11 format=3 uid="uid://b3fwaw8065dmj"]
 
 [ext_resource type="Script" path="res://Script/QuizChooser.gd" id="1_emutp"]
 [ext_resource type="Texture2D" uid="uid://4ugsgicv2o7w" path="res://Assets/NEW/candle/C300-1.png" id="2_es8fj"]
 [ext_resource type="Texture2D" uid="uid://csjm880wwbgla" path="res://Assets/NEW/Inside_C.png" id="2_uevht"]
 [ext_resource type="Texture2D" uid="uid://dp7ajl4y0ymd4" path="res://Assets/NEW/candle/C300-2.png" id="4_mqo05"]
 [ext_resource type="Texture2D" uid="uid://co53mncsd83l7" path="res://Assets/NEW/candle/C300-3.png" id="5_55v4w"]
+[ext_resource type="Texture2D" uid="uid://co2j32phl3oyb" path="res://Assets/NEW/Character v.2/characters/Animation Sprites/tile000.png" id="6_bhi6n"]
+[ext_resource type="Texture2D" uid="uid://bo8jbsgp1ufe5" path="res://Assets/NEW/Character v.2/clothes/sailor_bow.png" id="7_vk0ut"]
+[ext_resource type="Texture2D" uid="uid://83es4bjcbmpa" path="res://Assets/NEW/Character v.2/separate/hoe/clothes/sailor_bow_hoe.png" id="8_mxufo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6akw"]
 texture = ExtResource("2_uevht")
@@ -1592,6 +1596,24 @@ texture = ExtResource("4_mqo05")
 position = Vector2(108, 625)
 scale = Vector2(0.0644531, 0.125)
 texture = ExtResource("2_es8fj")
+
+[node name="Tile000" type="Sprite2D" parent="."]
+position = Vector2(575, 542)
+scale = Vector2(5.68749, 6.22657)
+texture = ExtResource("6_bhi6n")
+
+[node name="SailorBow" type="Sprite2D" parent="."]
+position = Vector2(590, 568.5)
+scale = Vector2(5.95946, 7.7381)
+texture = ExtResource("7_vk0ut")
+hframes = 69
+vframes = 37
+
+[node name="SailorBowHoe" type="Sprite2D" parent="."]
+position = Vector2(250, 471)
+texture = ExtResource("8_mxufo")
+hframes = 46
+vframes = 5
 
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_activated" from="Panel/CatagoryList" to="." method="_on_item_list_item_activated"]
