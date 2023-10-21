@@ -2,23 +2,12 @@ extends Control
 
 
 
-#var categoryDict = {
-#	"Natural Science": 17,
-#	"Geography": 22,
-#	"Math": 19,
-#	"Computer Science": 18,
-#	"History": 23
-#}
-
-
-
-
 signal http_request_completed
 
 
 func _ready():
 	var subjects = GlobalData.categoryDict_.keys()
-	var itemList = $Panel/ItemList 
+	var itemList = $Panel/CatagoryList 
 	populate_item_list(subjects, itemList)
 	
 	
@@ -30,8 +19,7 @@ func populate_item_list(items_array, itemNode):
 		itemNode.add_item(item)
 
 func _on_ItemList_item_selected(index):
-	print('slected item', $ItemList.get_item_text(index))
-
+	print('slected item', $Panel/CatagoryList.get_item_text(index))
 
 
 
@@ -46,7 +34,7 @@ func _Get_Api_Data():
 	print("get api data called")
 
 func _on_play_pressed():
-	var selected_subject = $Panel/ItemList.get_selected_items()
+	var selected_subject = $Panel/CatagoryList.get_selected_items()
 	
 	# GlobalData.subject_studying_ = selected_subject
 	#print(ApiSecondNew.categoryDict.values())
