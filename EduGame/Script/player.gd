@@ -2,7 +2,17 @@ extends RigidBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
 var speed = 200
+var start_position : Vector2 = Vector2(2, 2)
 
+
+func place_player_at_start():
+	# Assuming 'Sprite' is the name of the child node you want to move
+	var sprite = _animated_sprite.get_node("Sprite")
+	if sprite:
+		sprite.position = Vector2(start_position.x, start_position.y)
+	else:
+		print("Sprite node not found in Player.")
+			
 func _physics_process(delta):
 	var x_input = 0
 	var y_input = 0

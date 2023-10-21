@@ -1,17 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd6tl4sq128kc"]
+[gd_scene load_steps=3 format=3 uid="uid://cwhmk85k3wfi5"]
 
 [ext_resource type="Texture2D" uid="uid://d06uf8rn8kt4" path="res://Assets/NEW/PixelArtTD/Texture/TX Tileset Grass.png" id="1_5dsfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rla5b"]
 
 [node name="enemy" type="Node2D"]
+position = Vector2(567, 306)
 
 [node name="enemy" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="enemy"]
-position = Vector2(-7.15256e-07, -3.57628e-07)
+position = Vector2(38, 22)
 scale = Vector2(0.078125, 0.078125)
 texture = ExtResource("1_5dsfs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(38, 22)
 shape = SubResource("RectangleShape2D_rla5b")
