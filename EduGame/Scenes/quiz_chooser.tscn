@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3fwaw8065dmj"]
+[gd_scene load_steps=8 format=3 uid="uid://b3fwaw8065dmj"]
 
 [ext_resource type="Script" path="res://Script/QuizChooser.gd" id="1_emutp"]
+[ext_resource type="Texture2D" uid="uid://4ugsgicv2o7w" path="res://Assets/NEW/candle/C300-1.png" id="2_es8fj"]
 [ext_resource type="Texture2D" uid="uid://csjm880wwbgla" path="res://Assets/NEW/Inside_C.png" id="2_uevht"]
+[ext_resource type="Texture2D" uid="uid://dp7ajl4y0ymd4" path="res://Assets/NEW/candle/C300-2.png" id="4_mqo05"]
+[ext_resource type="Texture2D" uid="uid://co53mncsd83l7" path="res://Assets/NEW/candle/C300-3.png" id="5_55v4w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6akw"]
 texture = ExtResource("2_uevht")
@@ -1460,15 +1463,15 @@ offset_bottom = -93.232
 [node name="SubjectLabel" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.503
-anchor_top = 0.232
-anchor_right = 0.503
-anchor_bottom = 0.232
-offset_left = -57.953
-offset_top = -66.336
-offset_right = 57.047
-offset_bottom = -27.336
-text = "Subjects"
+anchor_left = 0.5
+anchor_top = 0.251
+anchor_right = 0.5
+anchor_bottom = 0.251
+offset_left = -74.5
+offset_top = -80.648
+offset_right = 75.5
+offset_bottom = -41.648
+text = "Topics of Education"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1539,10 +1542,56 @@ offset_top = -18.88
 offset_right = 184.5
 offset_bottom = 19.12
 
+[node name="C300-1" type="Sprite2D" parent="Panel"]
+position = Vector2(1121, 619)
+rotation = 0.0879562
+scale = Vector2(0.0688477, 0.137695)
+texture = ExtResource("2_es8fj")
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_w5k27")
 format = 2
+
+[node name="C300-1" type="Sprite2D" parent="."]
+position = Vector2(1039, 612)
+rotation = -0.0906693
+scale = Vector2(0.0611572, 0.1604)
+texture = ExtResource("2_es8fj")
+
+[node name="C300-2" type="Sprite2D" parent="."]
+position = Vector2(1077, 591)
+rotation = -0.118876
+scale = Vector2(0.0742188, 0.234375)
+texture = ExtResource("4_mqo05")
+
+[node name="C300-3" type="Sprite2D" parent="."]
+position = Vector2(73, 612)
+rotation = -0.0858046
+scale = Vector2(0.0644531, 0.149414)
+texture = ExtResource("5_55v4w")
+
+[node name="C300-3" type="Sprite2D" parent="C300-3"]
+position = Vector2(80, 610)
+scale = Vector2(0.0644531, 0.149414)
+texture = ExtResource("5_55v4w")
+
+[node name="C300-4" type="Sprite2D" parent="."]
+position = Vector2(154, 609)
+rotation = 0.0731771
+scale = Vector2(0.0439453, 0.182617)
+texture = ExtResource("5_55v4w")
+
+[node name="C300-5" type="Sprite2D" parent="."]
+position = Vector2(190, 617)
+rotation = -0.162858
+scale = Vector2(0.0537109, 0.136719)
+texture = ExtResource("4_mqo05")
+
+[node name="C300-6" type="Sprite2D" parent="."]
+position = Vector2(108, 625)
+scale = Vector2(0.0644531, 0.125)
+texture = ExtResource("2_es8fj")
 
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_activated" from="Panel/CatagoryList" to="." method="_on_item_list_item_activated"]

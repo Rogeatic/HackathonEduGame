@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmo7vi2g2krjl"
-path="res://.godot/imported/Inside_B.png-bb24dc6e1d5df03ff2686253b5c130eb.ctex"
+path="res://.godot/imported/Inside_B.png-ece3fa639adb4246c7d917e32d33d8f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/NEW/PaidTiles/Inside_B.png"
-dest_files=["res://.godot/imported/Inside_B.png-bb24dc6e1d5df03ff2686253b5c130eb.ctex"]
+source_file="res://Assets/NEW/PaidTiles/Animated/Inside_B.png"
+dest_files=["res://.godot/imported/Inside_B.png-ece3fa639adb4246c7d917e32d33d8f1.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyps7bcybna44"]
+[gd_scene load_steps=3 format=3 uid="uid://dyps7bcybna44"]
 
 [ext_resource type="Script" path="res://Script/menu.gd" id="1_k7076"]
+[ext_resource type="Texture2D" uid="uid://b3dccxjmeycwd" path="res://Assets/NEW/Bonus/Animated/Door1.png" id="2_vfsy7"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -23,10 +24,10 @@ anchor_left = 0.504
 anchor_top = 0.5
 anchor_right = 0.504
 anchor_bottom = 0.5
-offset_left = -85.608
-offset_top = -88.0
-offset_right = 88.392
-offset_bottom = -41.0
+offset_left = -96.608
+offset_top = -45.0
+offset_right = 99.392
+offset_bottom = 34.0
 text = "Begin Education"
 
 [node name="Options" type="Button" parent="."]
@@ -37,16 +38,6 @@ offset_top = 328.0
 offset_right = 777.0
 offset_bottom = 359.0
 text = "Options"
-
-[node name="Quit" type="Button" parent="."]
-layout_mode = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -43.0
-offset_right = 78.0
-offset_bottom = -12.0
-text = "Quit"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 visible = false
@@ -63,6 +54,24 @@ theme_override_constants/margin_bottom = 6
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 12
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -35.0
+offset_right = 70.0
+offset_bottom = -4.0
+text = "Quit"
+
+[node name="Door1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(41, 573)
+scale = Vector2(1.57292, 1.51302)
+texture = ExtResource("2_vfsy7")
+vframes = 4
+frame = 1
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
