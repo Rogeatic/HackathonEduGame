@@ -39,5 +39,11 @@ offset_right = 73.0
 offset_bottom = 70.0
 text = "Subjects"
 
+[node name="Play" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_activated" from="Panel/ItemList" to="." method="_on_item_list_item_activated"]
+[connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]
