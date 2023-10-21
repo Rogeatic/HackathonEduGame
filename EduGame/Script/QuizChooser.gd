@@ -1,5 +1,4 @@
 extends Control
-
 signal http_request_completed
 
 func _ready():
@@ -61,6 +60,7 @@ func _on_play_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	GlobalData.json_data_ = JSON.parse_string(body.get_string_from_utf8())
+
 	emit_signal("http_request_completed")
 
 
