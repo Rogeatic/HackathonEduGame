@@ -12,10 +12,16 @@ var categoryDict_ = {
 }
 var incorrect_ = 0
 
+var difficultyList_ = [
+	"easy",
+	"medium",
+	"hard"
+]
+
 var type_of_question_ = ["multiple", "boolean"]
 var number_of_quesions_ = 5
 var selected_catagory_ # this is the value not the key
-var selected_difficulty_ = ["easy", "medium", "hard"]
+var selected_difficulty_ = "easy"
 
 var subject_studying_
 

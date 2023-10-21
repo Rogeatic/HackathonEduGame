@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalData="*res://Script/GlobalData.gd"
-ApiSecondNew="*res://Script/APISecondNew.gd"
 
 [input]
 
