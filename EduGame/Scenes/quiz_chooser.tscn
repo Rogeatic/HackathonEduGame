@@ -1,4 +1,3 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3fwaw8065dmj"]
 [gd_scene load_steps=11 format=3 uid="uid://b3fwaw8065dmj"]
 
 [ext_resource type="Script" path="res://Script/QuizChooser.gd" id="1_emutp"]
