@@ -20,9 +20,9 @@ func populate_item_list():
 	var medButton = $Panel/mediumButton
 	var hardButton = $Panel/hardButton
 	
-	easyButton.text = GlobalData.difficultyList_[0]
-	medButton.text = GlobalData.difficultyList_[1]
-	hardButton.text = GlobalData.difficultyList_[2]
+	easyButton.text = GlobalData.difficultyList_[0].capitalize() 
+	medButton.text = GlobalData.difficultyList_[1].capitalize() 
+	hardButton.text = GlobalData.difficultyList_[2].capitalize() 
 
 
 
@@ -38,7 +38,6 @@ func _Get_Api_Data():
 
 	#print("Button pressed")  # Add this line
 	var url = "https://opentdb.com/api.php?amount=" + str(GlobalData.number_of_quesions_) + "&category=" + str(GlobalData.selected_catagory_) + "&difficulty=" + str(GlobalData.selected_difficulty_) + "&type=" + str(GlobalData.type_of_question_[0])
-
 	$Panel/HTTPRequest.request(url)
 	print("get api data called")
 
@@ -59,7 +58,7 @@ func _on_play_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	GlobalData.json_data_ = JSON.parse_string(body.get_string_from_utf8())
-
+	
 	emit_signal("http_request_completed")
 
 
@@ -68,7 +67,7 @@ func _on_http_request_done():
 	# Continue your code after the HTTP request here
 	# Load the Quiz
 	#get_tree().change_scene_to_file('res://Scenes/classroom.tscn')
-	get_tree().change_scene_to_file("res://Scenes/level.tscn")
+	get_tree().change_scene_to_file("res://Scenes/classroom.tscn")
 	
 	self.disconnect("http_request_completed", Callable(self, "_on_http_request_done"))
 	# self.disconnect("http_request_completed", self, "_on_http_request_done")
