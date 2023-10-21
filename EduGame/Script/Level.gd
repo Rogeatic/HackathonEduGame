@@ -24,7 +24,13 @@ const UNREAKABLE_TILE_LAYER = 2
 func _ready():
 	generate_map()
 	create_player()
+	place_colored_tile_bottom_left(BREAKABLE_TILE_ID) # Use the desired tile ID here
 	
+func place_colored_tile_bottom_left(tile_id):
+	var bottom_left_tile = Vector2i(0, map_height - 1 + map_offset)
+	tilemap.set_cell(BACKGROUND_TILE_LAYER, bottom_left_tile, tile_id, Vector2i(0, 0), 0)
+
+
 func create_player():
 	var player_scene = preload("res://Scenes/Player.tscn")
 	var player = player_scene.instantiate()
