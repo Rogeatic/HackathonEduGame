@@ -18,10 +18,10 @@ script = ExtResource("1_k7076")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 396.0
-offset_top = 269.0
-offset_right = 789.0
-offset_bottom = 419.0
+offset_left = 384.0
+offset_top = 264.0
+offset_right = 777.0
+offset_bottom = 414.0
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 21
 theme_override_constants/margin_right = 0

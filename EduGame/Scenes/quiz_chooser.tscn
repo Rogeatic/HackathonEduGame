@@ -41,25 +41,56 @@ text = "Subjects"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DifficultyList" type="ItemList" parent="Panel"]
+[node name="DiffcultyLabel" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 517.0
+offset_top = 298.0
+offset_right = 632.0
+offset_bottom = 337.0
+text = "Diffculty"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Play" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.006
 anchor_bottom = 0.008
-offset_left = 512.0
-offset_top = 597.0
-offset_right = 664.112
-offset_bottom = 635.0
+offset_left = 496.0
+offset_top = 528.0
+offset_right = 648.112
+offset_bottom = 566.0
+tooltip_text = "Make sure to select a subject to study"
 text = "Play"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Panel"]
+
+[node name="easyButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 344.0
+offset_right = 504.0
+offset_bottom = 382.0
+
+[node name="mediumButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 344.0
+offset_right = 632.0
+offset_bottom = 382.0
+
+[node name="hardButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 344.0
+offset_right = 760.0
+offset_bottom = 382.0
 
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_activated" from="Panel/CatagoryList" to="." method="_on_item_list_item_activated"]
 [connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]
 [connection signal="request_completed" from="Panel/HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="button_down" from="Panel/easyButton" to="." method="_on_easy_button_button_down"]
+[connection signal="pressed" from="Panel/easyButton" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="Panel/mediumButton" to="." method="_on_medium_button_pressed"]
+[connection signal="pressed" from="Panel/hardButton" to="." method="_on_hard_button_pressed"]
