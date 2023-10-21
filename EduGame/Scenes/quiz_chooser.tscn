@@ -25,7 +25,7 @@ offset_bottom = 38.0
 text = "<- Menu"
 alignment = 0
 
-[node name="ItemList" type="ItemList" parent="Panel"]
+[node name="CatagoryList" type="ItemList" parent="Panel"]
 layout_mode = 1
 offset_top = 66.0
 offset_right = 648.0
@@ -53,6 +53,6 @@ text = "Play"
 [node name="HTTPRequest" type="HTTPRequest" parent="Panel"]
 
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
-[connection signal="item_activated" from="Panel/ItemList" to="." method="_on_item_list_item_activated"]
+[connection signal="item_activated" from="Panel/CatagoryList" to="." method="_on_item_list_item_activated"]
 [connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]
 [connection signal="request_completed" from="Panel/HTTPRequest" to="." method="_on_http_request_request_completed"]
