@@ -17,6 +17,20 @@ var difficultyList_ = [
 	"hard"
 ]
 
+var level_scene = preload("res://Scenes/Level.tscn")
+var player_scene = preload("res://Scenes/Player.tscn")
+
+# Game State
+enum GameMode { NORMAL, BATTLE }
+var current_game_mode
+
+# Player variables
+var player
+var color: Array = ["blue", "grey", "orange"]
+
+# Level variables
+var current_level = 1
+
 var type_of_question_ = ["multiple", "boolean"]
 var number_of_quesions_ = 5
 var selected_catagory_ # this is the value not the key
