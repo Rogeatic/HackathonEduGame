@@ -6,8 +6,8 @@ extends Node2D
 @onready var tilemap = $TileMap
 
 # Randomizer & Dimension values ( make sure width & height is uneven)
-const initial_width = 30 
-const initial_height = 30 
+const initial_width = 32 
+const initial_height = 32 
 var map_width = initial_width
 var map_height = initial_height 
 var map_offset = 0 #Shifts map four rows down for UI
@@ -27,8 +27,8 @@ func _ready():
 	place_colored_tile_bottom_left(BREAKABLE_TILE_ID) # Use the desired tile ID here
 	
 func place_colored_tile_bottom_left(tile_id):
-	var bottom_left_tile = Vector2i(0, map_height - 1 + map_offset)
-	tilemap.set_cell(BACKGROUND_TILE_LAYER, bottom_left_tile, tile_id, Vector2i(0, 0), 0)
+	var bottom_left_tile = Vector2i(map_width -2, map_height - 2)
+	tilemap.set_cell(BACKGROUND_TILE_LAYER, bottom_left_tile, 3, Vector2i(0, 0), 0)
 
 
 func create_player():
