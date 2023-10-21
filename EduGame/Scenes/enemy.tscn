@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd6tl4sq128kc"]
+[gd_scene load_steps=4 format=3 uid="uid://dd6tl4sq128kc"]
 
-[ext_resource type="Texture2D" uid="uid://d06uf8rn8kt4" path="res://Assets/NEW/PixelArtTD/Texture/TX Tileset Grass.png" id="1_5dsfs"]
+[ext_resource type="Texture2D" uid="uid://cas4dwnkj4brx" path="res://Assets/monster-game-assets-ui-kit-png_247315.jpg" id="1_o3ixp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pg0o5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rla5b"]
 
@@ -13,7 +15,15 @@ gravity_scale = 0.0
 [node name="Sprite2D" type="Sprite2D" parent="enemy"]
 position = Vector2(38, 22)
 scale = Vector2(0.078125, 0.078125)
-texture = ExtResource("1_5dsfs")
+texture = ExtResource("1_o3ixp")
+
+[node name="Area2D" type="Area2D" parent="enemy"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/Area2D"]
+light_mask = 7
+visibility_layer = 7
+shape = SubResource("CircleShape2D_pg0o5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
 position = Vector2(38, 22)
