@@ -10,6 +10,7 @@ var categoryDict_ = {
 	"Computer Science": 18,
 	"History": 23
 }
+var incorrect_ = 0
 
 var type_of_question_ = ["multiple", "boolean"]
 var number_of_quesions_ = 5
@@ -21,14 +22,53 @@ var subject_studying_
 var json_data_
 var json_wrong_ = {"results":[]}
 
+func getCorrectAnswer(index):
+	return json_data_["results"][index]["correct_answer"]
+
+func getQuestionsLength():
+	return len(json_data_["results"])
+
 func getFirstQuestion():
 	if (len(json_data_["results"]) > 0):
-		print (json_data_)
+		#print (json_data_)
 		return json_data_["results"][0]["question"]
 	else:
 		print("outOfQuestions")
 		return null
+		
+func getQuestion(index):
+	if (len(json_data_["results"]) > 0 and json_data_["results"][index]!= null):
+		#print (json_data_)
+		return json_data_["results"][index]["question"]
+	else:
+		print("outOfQuestions")
+		return null
+		
+func getFirstAnswers():
+	if (len(json_data_["results"]) > 0):
+		#print (json_data_)
+		var correctAnswer = json_data_["results"][0]["correct_answer"]
+		var incorrectAnswers = json_data_["results"][0]["incorrect_answers"]
 
+		var answers = incorrectAnswers + [correctAnswer]
+		answers.shuffle()
+		return answers
+	else:
+		print("outOfQuestions")
+		return null
+
+func getAnswers(index):
+	if (len(json_data_["results"]) > 0 and json_data_["results"][index]!= null):
+		#print (json_data_)
+		var correctAnswer = json_data_["results"][index]["correct_answer"]
+		var incorrectAnswers = json_data_["results"][index]["incorrect_answers"]
+
+		var answers = incorrectAnswers + [correctAnswer]
+		answers.shuffle()
+		return answers
+	else:
+		print("outOfQuestions")
+		return null
 #func removeFirstQuestion():
 #	if (len(json_data_["results"]) > 0):
 #		print ("removing")
