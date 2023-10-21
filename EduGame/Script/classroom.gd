@@ -1,14 +1,15 @@
 extends Node2D
 
 
-var time_left: int = 5
+
+var time_left: int = 10
 var timer
 var timerLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	print(GlobalData.json_data_)
+	print(GlobalData.json_data_["results"]["question"])
 	var timer = $Timer
 	timer.wait_time = 1.0
 	timer.autostart = true
