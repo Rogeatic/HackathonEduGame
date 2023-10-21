@@ -9,10 +9,13 @@ var answers
 var question
 var index
 var savedColor
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	index = 0
-	GlobalData.incorrect_ = 0
+	var label = $Question/Label
+	label.disabled = true
+	GlobalData.json_wrong_["results"] = []
 	question_label = $Question
 	but1 = $Question/Button1
 	but2 = $Question/Button2
@@ -61,14 +64,33 @@ func _move_to_next_QuestionData():
 		but3.text = answers[2]
 		but4.text = answers[3]
 	else:
+		print(GlobalData.json_wrong_["results"])
 		print("done")
-		pass
-		# MOVE TO NEXT SCREEN
+		
+		#Go To the Dream State
+		get_tree().change_scene_to_file("res://Scenes/level.tscn")
 func checkIfCorrect(button):
 	if button.text == GlobalData.getCorrectAnswer(index):
+		var timer = $Question/Timer
+		var label = $Question/Label
+		var countdown = 5
+		label.disabled = false
+
+
+
+
+		label.disabled = true
 		_move_to_next_QuestionData()
 	else:
-		GlobalData.incorrect_ += 1
-		button.modulate = Color(1, 0, 0)
-		#button.background_color = Color(0.5, 0.2, 0.1) 
+		var timer = $Question/Timer
+		var label = $Question/Label
+		var countdown = 10
+		label.disabled = false
 		
+		
+		
+		
+		label.disabled = true
+		GlobalData.json_wrong_["results"].append(GlobalData.json_data_["results"][index])
+		button.modulate = Color(1, 0, 0)
+
