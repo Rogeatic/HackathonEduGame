@@ -1,12 +1,26 @@
-extends KinematicCollision2D 
+extends CharacterBody2D
 
+var direction : Vector2 = Vector2()
 
 func read_input():
+	velocity = Vector2()
 	if Input.is_action_pressed("up"):
-		pass
+		velocity.y -= 1
+		direction = Vector2(0, -1)
+		
 	if Input.is_action_pressed("down"):
-		pass
+		velocity.y += 1
+		direction = Vector2(0, 1)
+		
 	if Input.is_action_pressed("left"):
-		pass
+		velocity.x -= 1
+		direction = Vector2(-1, 0)
+		
 	if Input.is_action_pressed("right"):
-		pass
+		velocity.x += 1
+		direction = Vector2(1, 0)
+		
+	velocity = velocity.normalized()
+
+func _phyisics_process(delta):
+	read_input()
