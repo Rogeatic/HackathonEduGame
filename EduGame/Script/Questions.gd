@@ -80,7 +80,6 @@ func _move_to_next_QuestionData():
 		print("done")
 		
 		#Go To the Dream State
-		GlobalData.maze_time_ = 60
 		if len(GlobalData.json_wrong_["results"]) == 0:
 			GlobalData.maze_time_ = 60 * 2
 		else:

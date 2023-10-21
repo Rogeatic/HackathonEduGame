@@ -55,7 +55,10 @@ var json_wrong_ = {"results":[]}
 
 
 var maze_time_ = 60
+<<<<<<< Updated upstream
+=======
 var maze_level_ = 1
+>>>>>>> Stashed changes
 
 
 func getCorrectAnswer(index):
