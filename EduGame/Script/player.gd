@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var camera = $Camera2D
 @onready var level = get_node("/root/Level")
 
-var speed = 200
+var speed = 100
 
 func _physics_process(delta):
 	var x_input = 0
@@ -28,13 +28,13 @@ func _physics_process(delta):
 
 	# Determine animation
 	if direction == Vector2(0, -1):
-		_animated_sprite.play("Walk Up")
+		_animated_sprite.play("Up")
 	elif direction == Vector2(0, 1):
-		_animated_sprite.play("Walk Down")
+		_animated_sprite.play("Down")
 	elif direction.x < 0:
-		_animated_sprite.play("Walk Left")
+		_animated_sprite.play("Left")
 	elif direction.x > 0:
-		_animated_sprite.play("Walk Right")
+		_animated_sprite.play("Right")
 	else:
 		_animated_sprite.stop()
 func set_camera_limits():
