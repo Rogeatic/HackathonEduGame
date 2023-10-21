@@ -5,13 +5,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4d68"]
 
-[node name="enemy" type="RigidBody2D"]
-gravity_scale = 0.0
+[node name="enemy" type="CharacterBody2D"]
 script = ExtResource("1_nw2x0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-7.15256e-07, -3.57628e-07)
-scale = Vector2(0.078125, 0.078125)
+z_index = 1
+position = Vector2(7.45062e-07, 0.5)
+scale = Vector2(0.078125, 0.0820313)
 texture = ExtResource("1_5dsfs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

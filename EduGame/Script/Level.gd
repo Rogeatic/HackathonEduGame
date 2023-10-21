@@ -12,6 +12,7 @@ var map_width = initial_width
 var map_height = initial_height 
 var map_offset = 0 #Shifts map four rows down for UI
 var rng = RandomNumberGenerator.new()
+var EnemyScene = preload("res://Scenes/enemy.tscn")
 
 # Tilemap constants
 const BACKGROUND_TILE_ID = 0
@@ -25,6 +26,15 @@ func _ready():
 	generate_map()
 	create_player()
 	place_colored_tile_bottom_left(BREAKABLE_TILE_ID) # Use the desired tile ID here
+	spawn_enemy()
+	
+
+func spawn_enemy():
+	var enemy_instance = EnemyScene.instantiate()
+	enemy_instance.global_position = position
+	add_child(enemy_instance)
+	
+
 	
 func place_colored_tile_bottom_left(tile_id):
 	var bottom_left_tile = Vector2i(map_width -2, map_height - 2)
