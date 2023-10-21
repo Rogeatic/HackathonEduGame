@@ -4,7 +4,7 @@ extends Control
 
 func _on_play_pressed():
 	
-	get_tree().change_scene_to_file('res://Scenes/Maze 1.tscn')
+	get_tree().change_scene_to_file('res://Scenes/quiz_chooser.tscn')
 
 
 func _on_options_pressed():

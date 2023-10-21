@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3fwaw8065dmj"]
+
+[ext_resource type="Script" path="res://Script/Quiz Chooser.gd" id="1_bcwcx"]
+
+[node name="Quiz Chooser" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcwcx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 500.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 73.0
+offset_bottom = 38.0
+text = "<- Menu"
+alignment = 0
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+layout_mode = 1
+offset_top = 66.0
+offset_right = 648.0
+offset_bottom = 266.0
+item_count = 3
+item_0/text = "Math"
+item_1/text = "Science"
+item_2/text = ""
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 73.0
+offset_bottom = 70.0
+text = "Subjects"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
