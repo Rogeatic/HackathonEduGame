@@ -1,6 +1,7 @@
-extends CharacterBody2D
+extends Sprite2D
 
 var direction : Vector2 = Vector2()
+var velocity : Vector2 = Vector2()
 
 func read_input():
 	velocity = Vector2()
@@ -21,6 +22,7 @@ func read_input():
 		direction = Vector2(1, 0)
 		
 	velocity = velocity.normalized()
+	
 	
 func _phyisics_process(delta):
 	read_input()
