@@ -96,8 +96,9 @@ func _process(delta):
 		timer.autostart = false
 		enableButtons()
 		_move_to_next_QuestionData()
-	timer.wait_time -=1 * delta
-	print(str(int(timer.wait_time)))
+	if (label.visible):
+		timer.wait_time -=1 * delta
+
 	
 func disableButtons():
 	but1.disabled = true
