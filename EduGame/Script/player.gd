@@ -1,4 +1,4 @@
-extends Sprite2D
+extends RigidBody2D
 
 var direction : Vector2 = Vector2()
 var velocity : Vector2 = Vector2()
@@ -22,6 +22,7 @@ func read_input():
 		direction = Vector2(1, 0)
 		
 	velocity = velocity.normalized()
+	velocity = move_and_collide(velocity * 200)
 	
 	
 func _phyisics_process(delta):
