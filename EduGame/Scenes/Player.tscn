@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dy8flvroj4h2j"]
+[gd_scene load_steps=28 format=3 uid="uid://b4bjfuq4hmwya"]
 
 [ext_resource type="Script" path="res://Script/Player.gd" id="1_5t31i"]
 [ext_resource type="Texture2D" uid="uid://bmhjfavlv2x7y" path="res://Assets/Expanded Animation Sprites/imageonline/00.png" id="2_gbbcc"]
@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://bu4snw5efc5og" path="res://Assets/Expanded Animation Sprites/imageonline/25.png" id="23_u0vdj"]
 [ext_resource type="Texture2D" uid="uid://b88ylbsjyyn4c" path="res://Assets/Expanded Animation Sprites/imageonline/29.png" id="24_mwpll"]
 [ext_resource type="Texture2D" uid="uid://bn8stqmld5jkj" path="res://Assets/Expanded Animation Sprites/imageonline/030.png" id="25_2thm0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxowu"]
+size = Vector2(12, 15)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cajbl"]
 animations = [{
@@ -135,12 +138,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxowu"]
-size = Vector2(12, 15)
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_5t31i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_kxowu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -5)
@@ -151,7 +155,3 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 1)
 zoom = Vector2(5, 5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_kxowu")
