@@ -1,4 +1,3 @@
-[gd_scene load_steps=28 format=3 uid="uid://dy8flvroj4h2j"]
 [gd_scene load_steps=28 format=3 uid="uid://b4bjfuq4hmwya"]
 
 [ext_resource type="Script" path="res://Script/Player.gd" id="1_5t31i"]
@@ -139,20 +138,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxowu"]
-size = Vector2(12, 15)
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_5t31i")
 
-<<<<<<< Updated upstream
-=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_kxowu")
 
->>>>>>> Stashed changes
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -5)
 scale = Vector2(0.8125, 0.6875)
@@ -162,7 +155,3 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 1)
 zoom = Vector2(5, 5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_kxowu")

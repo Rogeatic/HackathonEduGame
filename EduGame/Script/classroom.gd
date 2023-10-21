@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var time_left: int = 5
+
 var time_left: int = 10
 var timer
 var timerLabel
