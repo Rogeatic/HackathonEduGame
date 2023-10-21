@@ -21,6 +21,6 @@ func read_input():
 		direction = Vector2(1, 0)
 		
 	velocity = velocity.normalized()
-
+	
 func _phyisics_process(delta):
 	read_input()
