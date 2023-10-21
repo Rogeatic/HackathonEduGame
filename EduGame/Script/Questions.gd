@@ -89,10 +89,13 @@ func checkIfCorrect(button):
 	else:
 		timer.wait_time = 10
 		GlobalData.json_wrong_["results"].append(GlobalData.json_data_["results"][index])
-		button.modulate = Color(1, 0, 0)
+
 		for i in buttons:
 			if i.text == GlobalData.getCorrectAnswer(index):
 				i.modulate = Color(0,1,0)	
+			else:
+				i.modulate = Color(.75,0,0)	
+		button.modulate = Color(1, 0, 0)
 	label.visible = true
 	timer.autostart = true
 	timer.start()
