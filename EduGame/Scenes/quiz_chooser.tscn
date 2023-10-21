@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3fwaw8065dmj"]
+[gd_scene load_steps=14 format=3 uid="uid://b3fwaw8065dmj"]
 
 [ext_resource type="Script" path="res://Script/QuizChooser.gd" id="1_emutp"]
 [ext_resource type="Texture2D" uid="uid://4ugsgicv2o7w" path="res://Assets/NEW/candle/C300-1.png" id="2_es8fj"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://co2j32phl3oyb" path="res://Assets/NEW/Character v.2/characters/Animation Sprites/tile000.png" id="6_bhi6n"]
 [ext_resource type="Texture2D" uid="uid://bo8jbsgp1ufe5" path="res://Assets/NEW/Character v.2/clothes/sailor_bow.png" id="7_vk0ut"]
 [ext_resource type="Texture2D" uid="uid://83es4bjcbmpa" path="res://Assets/NEW/Character v.2/separate/hoe/clothes/sailor_bow_hoe.png" id="8_mxufo"]
+[ext_resource type="Texture2D" uid="uid://dx24stdokhuxy" path="res://Assets/Old Project Assets/SPRITES/ITEMS/item8BIT_book.png" id="9_3y3se"]
+[ext_resource type="Texture2D" uid="uid://bwor3ucrxqk5f" path="res://Assets/Old Project Assets/SPRITES/ITEMS/item8BIT_floppydisk.png" id="10_snhl3"]
+[ext_resource type="Texture2D" uid="uid://cnppuaquq15o8" path="res://Assets/Old Project Assets/SPRITES/ITEMS/item8BIT_scroll.png" id="11_od516"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6akw"]
 texture = ExtResource("2_uevht")
@@ -1546,6 +1549,7 @@ offset_right = 184.5
 offset_bottom = 19.12
 
 [node name="C300-1" type="Sprite2D" parent="Panel"]
+modulate = Color(1, 0.890196, 1, 0.772549)
 position = Vector2(1121, 619)
 rotation = 0.0879562
 scale = Vector2(0.0688477, 0.137695)
@@ -1557,18 +1561,21 @@ tile_set = SubResource("TileSet_w5k27")
 format = 2
 
 [node name="C300-1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.909804)
 position = Vector2(1039, 612)
 rotation = -0.0906693
 scale = Vector2(0.0611572, 0.1604)
 texture = ExtResource("2_es8fj")
 
 [node name="C300-2" type="Sprite2D" parent="."]
+modulate = Color(0.976471, 0.772549, 0.796078, 0.784314)
 position = Vector2(1077, 591)
 rotation = -0.118876
 scale = Vector2(0.0742188, 0.234375)
 texture = ExtResource("4_mqo05")
 
 [node name="C300-3" type="Sprite2D" parent="."]
+self_modulate = Color(0.843137, 0.831373, 0.854902, 1)
 position = Vector2(73, 612)
 rotation = -0.0858046
 scale = Vector2(0.0644531, 0.149414)
@@ -1580,18 +1587,21 @@ scale = Vector2(0.0644531, 0.149414)
 texture = ExtResource("5_55v4w")
 
 [node name="C300-4" type="Sprite2D" parent="."]
+self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
 position = Vector2(154, 609)
 rotation = 0.0731771
 scale = Vector2(0.0439453, 0.182617)
 texture = ExtResource("5_55v4w")
 
 [node name="C300-5" type="Sprite2D" parent="."]
+modulate = Color(1, 0.827451, 0.854902, 1)
 position = Vector2(190, 617)
 rotation = -0.162858
 scale = Vector2(0.0537109, 0.136719)
 texture = ExtResource("4_mqo05")
 
 [node name="C300-6" type="Sprite2D" parent="."]
+modulate = Color(0.901961, 0.788235, 0.741176, 1)
 position = Vector2(108, 625)
 scale = Vector2(0.0644531, 0.125)
 texture = ExtResource("2_es8fj")
@@ -1613,6 +1623,27 @@ position = Vector2(250, 471)
 texture = ExtResource("8_mxufo")
 hframes = 46
 vframes = 5
+
+[node name="Item8bitBook" type="Sprite2D" parent="."]
+modulate = Color(0.917647, 0.784314, 0.996078, 0.780392)
+position = Vector2(624, 610)
+rotation = 0.394237
+scale = Vector2(3.4375, 3.50681)
+texture = ExtResource("9_3y3se")
+
+[node name="Item8bitFloppydisk" type="Sprite2D" parent="."]
+modulate = Color(0.913725, 0.670588, 0.694118, 0.890196)
+position = Vector2(1055, 637)
+rotation = -0.823956
+scale = Vector2(1.43437, 1.71044)
+texture = ExtResource("10_snhl3")
+
+[node name="Item8bitScroll" type="Sprite2D" parent="."]
+modulate = Color(0.984314, 0.933333, 0.964706, 0.764706)
+position = Vector2(18, 640)
+rotation = 0.406732
+scale = Vector2(1.88736, 1.68873)
+texture = ExtResource("11_od516")
 
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="item_activated" from="Panel/CatagoryList" to="." method="_on_item_list_item_activated"]
