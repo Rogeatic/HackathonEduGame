@@ -16,7 +16,7 @@ layout_mode = 0
 offset_right = 648.0
 offset_bottom = 500.0
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="Menu" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 7.0
@@ -30,12 +30,8 @@ layout_mode = 1
 offset_top = 66.0
 offset_right = 648.0
 offset_bottom = 266.0
-item_count = 3
-item_0/text = "Math"
-item_1/text = "Science"
-item_2/text = ""
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="SubjectLabel" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 44.0
@@ -43,4 +39,17 @@ offset_right = 73.0
 offset_bottom = 70.0
 text = "Subjects"
 
-[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[node name="Play" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.006
+anchor_bottom = 0.008
+offset_left = 476.0
+offset_top = 305.0
+offset_right = 628.112
+offset_bottom = 343.0
+text = "Play"
+
+[connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
+[connection signal="item_activated" from="Panel/ItemList" to="." method="_on_item_list_item_activated"]
+[connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]
