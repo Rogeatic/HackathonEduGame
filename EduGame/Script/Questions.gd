@@ -94,10 +94,10 @@ func _move_to_next_QuestionData():
 
 func checkIfCorrect(button):
 	if button.text == GlobalData.getCorrectAnswer(index):
-		timer.wait_time = 5
+		timer.wait_time = 3
 		button.modulate = Color(0, 1, 0)	
 	else:
-		timer.wait_time = 10
+		timer.wait_time = 5
 		GlobalData.json_wrong_["results"].append(GlobalData.json_data_["results"][index])
 
 		for i in buttons:

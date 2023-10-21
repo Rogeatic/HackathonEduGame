@@ -26,12 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://b88ylbsjyyn4c" path="res://Assets/Expanded Animation Sprites/imageonline/29.png" id="24_mwpll"]
 [ext_resource type="Texture2D" uid="uid://bn8stqmld5jkj" path="res://Assets/Expanded Animation Sprites/imageonline/030.png" id="25_2thm0"]
 
-<<<<<<< Updated upstream
-=======
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxowu"]
 size = Vector2(12, 15)
 
->>>>>>> Stashed changes
 [sub_resource type="SpriteFrames" id="SpriteFrames_cajbl"]
 animations = [{
 "frames": [{

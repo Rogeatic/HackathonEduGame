@@ -1,10 +1,7 @@
 extends Node2D
 
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 var time_left: int = 10
 var timer
 var timerLabel
