@@ -19,7 +19,7 @@ signal http_request_completed
 
 
 func _ready():
-	var subjects = ApiSecondNew.categoryDict.keys()
+	var subjects = categoryDict.keys()
 	var itemList = $Panel/ItemList 
 	populate_item_list(subjects, itemList)
 	
@@ -59,8 +59,9 @@ func _on_play_pressed():
 	_Get_Api_Data()
 	#var data = _Get_Api_Data()
 
-	
-	
+
+	#print(GlobalData.getFirstQuestion())
+	#print(GlobalData.removeFirstQuestion())
 	#get_tree().change_scene_to_file('res://Scenes/classroom.tscn')
 	
 	

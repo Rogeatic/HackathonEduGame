@@ -13,3 +13,5 @@ func _ready():
 func _on_button_pressed():
 	print(GlobalData.json_data_)
 	pass # Replace with function body.
+	print(GlobalData.getFirstQuestion())
+	print(GlobalData.removeFirstQuestion())
