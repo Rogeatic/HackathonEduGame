@@ -4,14 +4,16 @@ extends Node2D
 
 # Node references
 @onready var tilemap = $TileMap
+@onready var enemy_scene = preload("res://Scenes/enemy.tscn")
 
 # Randomizer & Dimension values ( make sure width & height is uneven)
-const initial_width = 32 
-const initial_height = 32 
+const initial_width = 30 
+const initial_height = 30 
 var map_width = initial_width
 var map_height = initial_height 
 var map_offset = 0 #Shifts map four rows down for UI
 var rng = RandomNumberGenerator.new()
+var num_enemies = 10
 
 # Tilemap constants
 const BACKGROUND_TILE_ID = 0
@@ -24,17 +26,29 @@ const UNREAKABLE_TILE_LAYER = 2
 func _ready():
 	generate_map()
 	create_player()
-	place_colored_tile_bottom_left(BREAKABLE_TILE_ID) # Use the desired tile ID here
 	
-func place_colored_tile_bottom_left(tile_id):
-	var bottom_left_tile = Vector2i(map_width -2, map_height - 2)
-	tilemap.set_cell(BACKGROUND_TILE_LAYER, bottom_left_tile, 3, Vector2i(0, 0), 0)
-
-
 func create_player():
 	var player_scene = preload("res://Scenes/Player.tscn")
 	var player = player_scene.instantiate()
 	player.global_position = tilemap.map_to_local(Vector2(3,3))
+	
+func spawn_enemies():
+	var spawned = 0
+	while spawned < num_enemies:
+		# Random position within the maze
+		var x = rng.randi_range(1, map_width - 2)
+		var y = rng.randi_range(1, map_height - 2) + map_offset
+		
+		var cell_coords = Vector2i(x, y)
+		
+		# Check if the cell is empty and away from the player's starting position
+		if is_cell_empty(BREAKABLE_TILE_LAYER, cell_coords) and is_cell_empty(UNREAKABLE_TILE_LAYER, cell_coords) and cell_coords.distance_to(Vector2i(3, 3 + map_offset)) > 4:
+			
+			# Instantiate enemy and set its position
+			var enemy = enemy_scene.instance()
+			enemy.global_position = tilemap.map_to_world(cell_coords) + tilemap.cell_size / 2  # Center in the cell
+			add_child(enemy)
+			spawned += 1
 	
 # ---------------- Map Generation -------------------------------------
 func generate_map():
