@@ -31,6 +31,12 @@ func _physics_process(delta):
 	if attack_timer > 0:
 		attack_timer -= delta
 	
+	# Check if the enemy can attack
+	if player_in_range and attack_timer <= 0:
+		current_state = State.ATTACKING
+	elif player_in_range:
+		current_state = State.CHASING
+
 	match current_state:
 		State.PATROLLING:
 			patrol(delta)
@@ -62,7 +68,7 @@ func attack():
 		for body in bodies:
 			if body.has_method("take_damage"):
 				body.take_damage(attack_damage)
-			attack_timer = attack_cooldown
+		attack_timer = attack_cooldown
 
 func _on_DetectionArea_area_entered(area):
 	if area.name == "Player":
@@ -75,6 +81,3 @@ func _on_DetectionArea_area_exited(area):
 		player_in_range = false
 		player = null
 		current_state = State.PATROLLING
-func _on_Area2D_body_entered(body):
-	if body.has_method("take_damage"):
-		body.take_damage(attack_damage)
