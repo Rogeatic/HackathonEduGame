@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://ck350f1kpb0jt" path="res://Assets/NEW/Character v.2/characters/Animation Sprites/tile023.png" id="29_uc8l6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7nk2"]
+size = Vector2(13, 21)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hhfym"]
 animations = [{
@@ -224,11 +225,13 @@ animations = [{
 }]
 
 [node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(10, 16)
 mass = 0.01
 gravity_scale = 0.0
 script = ExtResource("1_fl160")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_d7nk2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
