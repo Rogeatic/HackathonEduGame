@@ -28,38 +28,50 @@ offset_top = -30.5
 offset_right = 123.28
 offset_bottom = 48.21
 text = "Button 1"
-text_overrun_behavior = 4
 
 [node name="Button2" type="Button" parent="MarginContainer/Question"]
-layout_mode = 0
-offset_left = 715.0
-offset_top = 109.0
-offset_right = 955.08
-offset_bottom = 187.71
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.725
+anchor_top = 5.706
+anchor_right = 0.725
+anchor_bottom = 5.706
+offset_left = -120.2
+offset_top = -39.356
+offset_right = 119.88
+offset_bottom = 39.354
 text = "Button 2"
-text_overrun_behavior = 4
 
 [node name="Button3" type="Button" parent="MarginContainer/Question"]
-layout_mode = 0
-offset_left = 199.0
-offset_top = 248.0
-offset_right = 439.08
-offset_bottom = 326.71
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.277
+anchor_top = 11.052
+anchor_right = 0.277
+anchor_bottom = 11.052
+offset_left = -120.104
+offset_top = -39.352
+offset_right = 119.976
+offset_bottom = 39.3579
 text = "Button 3"
-text_overrun_behavior = 4
 
 [node name="Button4" type="Button" parent="MarginContainer/Question"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 713.0
-offset_top = 241.0
-offset_right = 953.08
-offset_bottom = 319.71
+anchor_left = 0.723
+anchor_top = 10.783
+anchor_right = 0.723
+anchor_bottom = 10.783
+offset_left = -119.896
+offset_top = -39.358
+offset_right = 120.184
+offset_bottom = 39.3519
 text = "Button 4
 "
-text_overrun_behavior = 4
 
 [node name="Timer" type="Timer" parent="MarginContainer/Question"]
+wait_time = 33.92
+autostart = true
 
 [node name="Label" type="Label" parent="MarginContainer/Question"]
 layout_mode = 1
@@ -80,3 +92,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="MarginContainer/Question/Button2" to="MarginContainer" method="_on_button_2_pressed"]
 [connection signal="pressed" from="MarginContainer/Question/Button3" to="MarginContainer" method="_on_button_3_pressed"]
 [connection signal="pressed" from="MarginContainer/Question/Button4" to="MarginContainer" method="_on_button_4_pressed"]
+[connection signal="timeout" from="MarginContainer/Question/Timer" to="MarginContainer" method="_on_timer_timeout"]
