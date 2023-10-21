@@ -1,9 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://ciiyelpsj61q5"]
+[gd_scene load_steps=12 format=3 uid="uid://cprnkg5ci8px6"]
 
 [ext_resource type="Script" path="res://Script/Level.gd" id="1_u7wi4"]
 [ext_resource type="Texture2D" uid="uid://bug8hjevr0145" path="res://Resources/wall.png" id="2_1xpge"]
 [ext_resource type="Texture2D" uid="uid://bwo20jvsmiull" path="res://Resources/breakable_0.png" id="3_7nb26"]
 [ext_resource type="PackedScene" uid="uid://dy8flvroj4h2j" path="res://Scenes/Player.tscn" id="3_m8gvy"]
+[ext_resource type="PackedScene" uid="uid://b4bjfuq4hmwya" path="res://Scenes/Player.tscn" id="3_m8gvy"]
 [ext_resource type="Texture2D" uid="uid://dhc6nexnj6d1y" path="res://Assets/wall001.png" id="4_xodsh"]
 [ext_resource type="PackedScene" uid="uid://bld11fite4ahg" path="res://Scenes/Exit.tscn" id="6_2od3e"]
 

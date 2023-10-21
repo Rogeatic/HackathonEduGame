@@ -81,7 +81,18 @@ func _move_to_next_QuestionData():
 		
 		#Go To the Dream State
 		GlobalData.maze_time_ = 60
+		if len(GlobalData.json_wrong_["results"]) == 0:
+			GlobalData.maze_time_ = 60 * 2
+		else:
+			GlobalData.maze_time_ = 60
+		
+		if GlobalData.maze_level_ == 2:
+			get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
+		
 		get_tree().change_scene_to_file("res://Scenes/level.tscn")
+
+
+
 func checkIfCorrect(button):
 	if button.text == GlobalData.getCorrectAnswer(index):
 		timer.wait_time = 5

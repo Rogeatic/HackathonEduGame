@@ -55,6 +55,7 @@ var json_wrong_ = {"results":[]}
 
 
 var maze_time_ = 60
+var maze_level_ = 1
 
 
 func getCorrectAnswer(index):

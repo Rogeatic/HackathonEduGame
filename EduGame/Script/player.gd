@@ -60,6 +60,16 @@ func _physics_process(delta):
 			var colliding_cell = tilemap.world_to_map(collision.collision_point)
 			if tilemap.get_cell(colliding_cell.x, colliding_cell.y + level.map_offset) == level.BREAKABLE_TILE_ID:
 				tilemap.set_cell(colliding_cell.x, colliding_cell.y + level.map_offset, -1)  # Remove the breakable block
+		if body.has_method("get_name"): 
+			print("Collided with:", body.get_name())
+			if body.get_name() == "Exit":
+				GlobalData.level_scene
+				get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
+			if body.get_name() == "Exit2":
+				get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+		else:
+			print("Collided with an unnamed object.")
+
 	
 
 	# Determine animation
