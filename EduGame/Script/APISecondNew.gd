@@ -1,5 +1,8 @@
 extends Control
 var numberOfQuestions = 5
+
+
+
 var categoryDict = {
 	"Natural Science": 17,
 	"Geography": 22,
@@ -8,10 +11,11 @@ var categoryDict = {
 	"History": 23
 }
 var Difficulty = ["easy", "medium", "hard"]
-var input = "Geography"
+var input = "Natural Science"
 var category = categoryDict[input]
 var type = ["multiple", "boolean"]
 var jsonData = null
+var placeHolderList = {"results":[]}
 
 
 
@@ -41,13 +45,13 @@ func _Get_Api_Data():
 	
 	
 func _on_http_request_request_completed(result, response_code, headers, body):
-	jsonData = JSON.parse_string(body.get_string_from_utf8())
+	GlobalData.json_data_ = JSON.parse_string(body.get_string_from_utf8())
 	#print(jsonData["results"])
 	
 	
 	
 	# Extract the question and answers
-	var question = getAndPopFirstQuestion(jsonData)
+	var question = GlobalData.json_data_.getAndPopFirstQuestion()
 	print(question["question"])
 	
 	
@@ -68,15 +72,16 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	
 	
 
-func getAndPopFirstQuestion(data):
-	if len(data["results"]) > 0:
-		var question = data["results"][0]
-		data["results"].remove_at(0)
-		return question
+func getFirstQuestion():
+	if len(jsonData["results"]) > 0:
+		return jsonData["results"][0]
 	else:
 		print("failed get data, might be out of questions")
-		return data
+		return jsonData
 
+func removeFirstQuestion():
+		placeHolderList["results"].add(jsonData["results"][0])
+		jsonData["results"].remove_at(0)
 func getRandomAnswersList(correctAnswer, incorrectAnswers):
 	# Randomize the order of the answers, including the correct answer
 	var answers = incorrectAnswers + [correctAnswer]

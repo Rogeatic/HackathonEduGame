@@ -5,4 +5,4 @@ var pos_subjects_ = ["Math", "Science", "English"]
 
 var subject_studying_
 
-var current_level_ = 0
+var json_data_
