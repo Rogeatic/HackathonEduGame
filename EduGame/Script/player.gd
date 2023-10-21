@@ -59,7 +59,7 @@ func _physics_process(delta):
 			if body.get_name() == "Exit":
 				get_tree().change_scene_to_file("res://Scenes/Level2.tscn")
 			if body.get_name() == "Exit2":
-				pass
+				get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 		else:
 			print("Collided with an unnamed object.")
 

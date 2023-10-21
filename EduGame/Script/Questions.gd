@@ -80,6 +80,7 @@ func _move_to_next_QuestionData():
 		print("done")
 		
 		#Go To the Dream State
+		GlobalData.maze_time_ = 60
 		get_tree().change_scene_to_file("res://Scenes/level.tscn")
 func checkIfCorrect(button):
 	if button.text == GlobalData.getCorrectAnswer(index):
